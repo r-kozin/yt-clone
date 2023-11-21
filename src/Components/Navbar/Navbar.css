@@ -1,0 +1,122 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #303030;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    margin-right: 5rem;
+}
+.right{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 8px;
+    margin-left: 5rem;
+}
+.center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 400px;
+}
+.voiceInput{
+    color: white;
+    background-color: #5e5e5e;
+    border-radius: 50%;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    height: fit-content;
+    cursor: pointer;
+}
+.voiceInput:hover{
+    background-color: #6e6e6e;
+}
+#searchBar{
+    background-color: #303030;
+    border: 1px solid #5e5e5e;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    outline: none;
+    height: 100%;
+    width: 100%;
+}
+#searchBar:focus{
+    border: 1px solid rgb(86, 86, 255);
+}
+#searchButton{
+    background-color: #303030;
+    border: 1px solid #5e5e5e;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.25rem 0.5rem 0 0.5rem;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#profileIcon{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+#uploadIcon{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#uploadIcon:hover{
+    background-color: #5e5e5e;
+}
+#notificationBell{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#notificationBell:hover{
+    background-color: #5e5e5e;
+}
+#menuIcon{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menuIcon:hover{
+    background-color: #5e5e5e;
+}
+#logo{
+    height: 1.5rem;
+    cursor: pointer;
+}

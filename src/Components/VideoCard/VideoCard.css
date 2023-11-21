@@ -1,0 +1,33 @@
+.videoCard{
+    display: flex;
+    flex-direction: column;
+    max-height: 310px;
+    max-width: 425px;
+    cursor: pointer;
+}
+.videoInfo{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: center;
+}
+.videoText{
+    display: flex;
+    flex-direction: column;
+}
+.videoText > p{
+    margin: 0;
+    font-size: 0.8rem;
+    color: gray;
+}
+.videoText > h4{
+    margin: 0;
+    font-size: 0.9rem;
+}
+.thumbnail{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+}
