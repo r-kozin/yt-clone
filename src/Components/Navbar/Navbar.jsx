@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import MicIcon from "@mui/icons-material/Mic";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
-import MenuIcon from '@mui/icons-material/Menu';
-import YouTubeLogo from '../../assets/images/yt_logo_rgb_dark.png'
+import MenuIcon from "@mui/icons-material/Menu";
+import YouTubeLogo from "../../assets/images/yt_logo_rgb_dark.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  useEffect(() => {
+    console.log("isMenuOpen: ", isMenuOpen)
+      //TODO: Implement redux
+      //TODO: implement menu style change through dispatch
+  }, [isMenuOpen]);
+
   return (
     <div className="nav">
       <div className="left">
-        <div id="menuIcon"><MenuIcon /></div>
+        <div id="menuIcon">
+          <MenuIcon onClick={() => setIsMenuOpen(!isMenuOpen)}/>
+        </div>
         <img src={YouTubeLogo} alt="youtube-logo" id="logo"></img>
       </div>
       <div className="center">
@@ -29,10 +39,10 @@ const Navbar = () => {
       </div>
       <div className="right">
         <div id="uploadIcon">
-          <VideocamOutlinedIcon fontSize="medium"/>
+          <VideocamOutlinedIcon fontSize="medium" />
         </div>
         <div id="notificationBell">
-          <NotificationsOutlinedIcon fontSize="medium"/>
+          <NotificationsOutlinedIcon fontSize="medium" />
         </div>
         <div id="profileIcon">
           <span>RK</span>
