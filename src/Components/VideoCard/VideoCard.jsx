@@ -1,11 +1,17 @@
 import React from "react";
 import "./VideoCard.css";
+import { formatDistanceToNow, formatDistanceToNowStrict } from "date-fns";
 
 const VideoCard = (props) => {
     const { thumbnail, title, channel, timestamp } = props;
 
     if (!thumbnail) {
         return <div>Thumbnail not found</div>;
+    }
+
+    function timeSince(time){
+        let formattedTime = Date.parse(time)
+        return formatDistanceToNowStrict(formattedTime)
     }
 
   return (
@@ -20,7 +26,7 @@ const VideoCard = (props) => {
         <div className="videoText">
           <h4>{title}</h4>
           <p>{channel}</p>
-          <p>Views • {timestamp}</p>
+          <p>Views • {timeSince(timestamp) + ' ago'}</p>
         </div>
       </div>
     </div>
