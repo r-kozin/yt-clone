@@ -49,3 +49,30 @@
     background-color: #5e5e5e;
     color: white;
 }
+.small_sidebar{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.25rem;
+    max-width: 100px;
+}
+.small_sidebar_item{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: large;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+}
+.small_sidebar_item:hover{
+    background-color: #5e5e5e;
+}
+
+.small_sidebar_icon{
+margin-top: .25rem;
+}

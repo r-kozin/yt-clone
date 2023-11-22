@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import { useSelector } from "react-redux";
 
 //icon imports
 import HomeIcon from "@mui/icons-material/Home";
@@ -15,8 +16,11 @@ import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import CheckroomOutlinedIcon from '@mui/icons-material/CheckroomOutlined';
 import PodcastsOutlinedIcon from '@mui/icons-material/PodcastsOutlined';
 
-const Sidebar = () => {
 
+const Sidebar = () => {
+const menuState = useSelector((state) => state.sidebar.isMenuOpen);
+
+if (menuState){
   return (
     <div className="sidebar">
       <div className="sidebar_section">
@@ -103,6 +107,80 @@ const Sidebar = () => {
         </div>
       </div>
     </div>
+  )} else return (
+    <div className="small_sidebar">
+    <div className="sidebar_section">
+      <div className="sidebar_items">
+        <div className="small_sidebar_item" id="feed">
+          <div className="small_sidebar_icon">
+            <HomeIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <MusicNoteIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <SubscriptionsIcon />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="sidebar_section">
+      <div className="sidebar_items">
+      <div className="sidebar_header">
+      <h3>Explore</h3>
+      </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <WhatshotOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <MovieCreationOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <RadioButtonCheckedOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <SportsEsportsOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <NewspaperOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <EmojiEventsOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <LightbulbOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <CheckroomOutlinedIcon />
+          </div>
+        </div>
+        <div className="small_sidebar_item">
+          <div className="small_sidebar_icon">
+            <PodcastsOutlinedIcon />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   );
 };
 

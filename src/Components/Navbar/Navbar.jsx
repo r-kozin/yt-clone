@@ -6,21 +6,23 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import YouTubeLogo from "../../assets/images/yt_logo_rgb_dark.png";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../../redux/sidebarSlice";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const isMenuOpen = useSelector((state) => state.sidebar.isMenuOpen);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     console.log("isMenuOpen: ", isMenuOpen)
-      //TODO: Implement redux
-      //TODO: implement menu style change through dispatch
+
   }, [isMenuOpen]);
 
   return (
     <div className="nav">
       <div className="left">
         <div id="menuIcon">
-          <MenuIcon onClick={() => setIsMenuOpen(!isMenuOpen)}/>
+          <MenuIcon onClick={() => dispatch(toggleMenu())}/>
         </div>
         <img src={YouTubeLogo} alt="youtube-logo" id="logo"></img>
       </div>
