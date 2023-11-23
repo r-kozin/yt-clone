@@ -20,7 +20,7 @@
     font-size: 0.8rem;
     color: gray;
 }
-.videoText > h4{
+.videoText > .routerLink > h4{
     margin: 0;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -31,4 +31,9 @@
     border-radius: 20px;
     object-fit: cover;
     overflow: hidden;
+}
+.routerLink{
+    text-decoration: none;
+    color: white;
+    margin: 0;
 }

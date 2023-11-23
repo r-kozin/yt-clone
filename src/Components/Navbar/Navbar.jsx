@@ -10,13 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../redux/sidebarSlice";
 
 const Navbar = () => {
-  const isMenuOpen = useSelector((state) => state.sidebar.isMenuOpen);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log("isMenuOpen: ", isMenuOpen)
-
-  }, [isMenuOpen]);
 
   return (
     <div className="nav">
