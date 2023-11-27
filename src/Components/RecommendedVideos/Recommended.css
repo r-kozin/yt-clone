@@ -1,0 +1,18 @@
+.recommended-videos{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    color: white;
+}
+.video-list{
+    padding: 10rem 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap:nowrap;
+    justify-content: space-evenly;
+    max-height: 70vh;
+    height: 100%;
+    color: white;
+    background-color: #303030;
+    overflow-y: scroll;
+}
