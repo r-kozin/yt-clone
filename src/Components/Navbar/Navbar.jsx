@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import YouTubeLogo from "../../assets/images/yt_logo_rgb_dark.png";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../redux/sidebarSlice";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,11 @@ const Navbar = () => {
     <div className="nav">
       <div className="left">
         <div id="menuIcon">
-          <MenuIcon onClick={() => dispatch(toggleMenu())}/>
+          <MenuIcon onClick={() => dispatch(toggleMenu())} />
         </div>
-        <img src={YouTubeLogo} alt="youtube-logo" id="logo"></img>
+        <Link to={"/"}>
+          <img src={YouTubeLogo} alt="youtube-logo" id="logo"></img>
+        </Link>
       </div>
       <div className="center">
         <div className="search">

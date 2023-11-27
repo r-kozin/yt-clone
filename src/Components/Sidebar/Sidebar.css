@@ -6,6 +6,7 @@
     flex: 1;
     padding-top: 0.5rem;
     color: white;
+    max-width: 205px;
 }
 .sidebar_items{
     display: flex;
